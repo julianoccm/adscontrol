@@ -12,7 +12,8 @@ AdsControl é um sistema desenvolvido para a A3 das aulas do Professor Felipak d
 
 ## Alunos
 - Juliano Colere Ceccon Moreira - RA 172412391 - julianocolerecmoreira@gmail.com 
-- Ramon marinho - RA 172320117 - ramonmarinhoot.i@gmail.com 
+- Ramon marinho - RA 172320117 - ramonmarinhoot.i@gmail.com
+- Eduardo Matos Santana - 172320344 -  edu.matosantana@gmail.com
 
 ## Sobre a Arquitetura do App
 Desenvolvido usando:
