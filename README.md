@@ -10,6 +10,10 @@
 ## Sobre o App
 AdsControl é um sistema desenvolvido para a A3 das aulas do Professor Felipak da UniCuritiba. Ele tem o intuito de ser um gerenciador de anuncios.
 
+## Alunos
+- Juliano Colere Ceccon Moreira - RA 172412391 - julianocolerecmoreira@gmail.com 
+- Ramon marinho - RA 172320117 - ramonmarinhoot.i@gmail.com 
+
 ## Sobre a Arquitetura do App
 Desenvolvido usando:
 - PHP
