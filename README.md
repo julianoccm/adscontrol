@@ -27,6 +27,15 @@ Desenvolvido usando:
 2. Ao iniciar o MySQL rode o script de inicialização da estrutura do banco que esta em `db/init.sql`
 3. Coloque os arquivos do projeto dentro de `htdocs` no `XAMPP`
 
+#### Como testar?
+Acesso de ADMIN:
+- Usuario: admin@email.com
+- Senha: senha
+
+Acesso de USER:
+- Usuario: user@email.com
+- Senha: senha
+
 #### Sobre as telas:
 - Todas as telas estão dentro da pasta `app`
 - Telas de login e cadastro estão dentro da pasta `app/auth`
