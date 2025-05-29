@@ -1,0 +1,21 @@
+/* public/css/style.css */
+
+/* Cor de fundo para o site (exemplo) */
+body {
+  background-color: #3c93eb;
+}
+
+/* Estilo para botão personalizado (caso prefira não repetir classes Tailwind) */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded shadow;
+}
+
+/* Transições suaves */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilizar a tabela responsiva se quiser algo específico */
+.table-striped tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
