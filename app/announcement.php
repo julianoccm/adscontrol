@@ -24,16 +24,20 @@ $announcement->fromArray($data);
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Detalhes do Anúncio - AdsControl</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
   <a href="javascript:history.back()" class="absolute top-8 left-8 flex items-center text-blue-600 hover:text-blue-800">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left mr-2" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left mr-2"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z" />
     </svg>
     Voltar
   </a>
@@ -46,22 +50,41 @@ $announcement->fromArray($data);
       <p class="text-gray-700"><strong>Descrição:</strong> <?= htmlspecialchars($announcement->get_description()) ?></p>
       <p class="text-gray-700"><strong>Data de criação:</strong>
         <?php
-          $createdAt = $announcement->get_created_at();
-          $date = DateTime::createFromFormat('Y-m-d H:i:s', $createdAt);
-          echo $date ? $date->format('d/m/Y') : htmlspecialchars($createdAt);
+        $createdAt = $announcement->get_created_at();
+        $date = DateTime::createFromFormat('Y-m-d H:i:s', $createdAt);
+        echo $date ? $date->format('d/m/Y') : htmlspecialchars($createdAt);
         ?>
       </p>
 
       <?php if ($announcement->get_image_url()): ?>
         <div>
           <p class="text-gray-700 mb-1"><strong>Imagem:</strong></p>
-          <img src="../<?= htmlspecialchars($announcement->get_image_url()) ?>"
-               alt="Imagem do anúncio"
-               class="w-full max-h-96 object-cover rounded shadow">
+          <img src="../<?= htmlspecialchars($announcement->get_image_url()) ?>" alt="Imagem do anúncio"
+            class="w-full max-h-96 object-cover rounded shadow">
         </div>
       <?php endif; ?>
     </div>
+
+    <div class="mt-6 flex space-x-4 print:hidden">
+      <button onclick="window.print()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      Imprimir anúncio
+      </button>
+    </div>
+    <style>
+      @media print {
+      @page {
+        size: A4 portrait;
+      }
+      .print\:hidden {
+        display: none !important;
+      }
+      .top-8.left-8 {
+        display: none !important;
+      }
+      }
+    </style>
   </div>
 
 </body>
+
 </html>
