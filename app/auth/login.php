@@ -38,12 +38,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Login - AdsControl</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/png" href="../../public/img/icons/favicon.ico"/>
+  <link rel="icon" type="image/png" href="../../public/img/icons/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="../../public/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="../../public/fonts/iconic/css/material-design-iconic-font.min.css">
@@ -54,8 +55,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" type="text/css" href="../../public/vendor/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" type="text/css" href="../../public/css/util.css">
   <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+
+  <a href="javascript:history.back()" class="absolute top-8 left-8 flex items-center text-blue-600 hover:text-blue-800">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left mr-2"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z" />
+    </svg>
+    Voltar
+  </a>
 
   <div class="limiter">
     <div class="container-login100">
@@ -118,4 +130,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <script src="../../public/js/main.js"></script>
 
 </body>
+
 </html>
